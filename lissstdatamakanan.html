@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Makanan</title>
+
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link href="https://fonts.googleapis.com/css?family=Dosis:400,500|Poppins:400,700&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+
+    <div id="#index">
+        <nav class="navbar bg-light ">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="img/logoBurger.png" alt="" width="105px">
+                </a>
+                <div class="d-flex">
+                    <a href="ListdataMakanan.html" class="d-flex btn btn-info">Menu Burger </a>
+                    <a href="Listdatapembeli.html" class="d-flex btn btn-info">List Pembeli </a>
+                    <a href="lissstdatamakanan.html" class="d-flex btn btn-info">List Makanan </a>
+                    <a href="index.html" class="d-flex btn btn-info">Home</a>
+                    <a href="ListPembeli.html" class="d-flex btn btn-info">Input data</a>
+                </div>
+        </nav>
+        <style>
+            body {
+                background-image: url('img/bng.png');
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: 100%;
+            }
+
+            .btn-1 {
+                background-color: #aa2727;
+                border: none;
+                color: rgb(131, 162, 197);
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+            }
+
+            div {
+                text-align: center;
+            }
+        </style>
+
+
+        <div id="app">
+            <div>
+                <a class="navbar-brand" href="#">
+                    <img src="" alt="" width="10px">
+                </a>
+            </div>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Nama Makanan</th>
+                        <th>Deskripsi Makanan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="data in dataMakanan">
+                        <td>{{ data.nama_makanan }}</td>
+                        <td>{{ data.deskripsi_makanan }}</td>
+                        <td><button class="btn btn danger" v-on:click="deleteMakanan(data. _id)">Hapus</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous">
+    </script>
+    <script src="https://docs.vuejs.id/js/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="datamakanan.js"></script>
+
+</body>
+
+</html>
